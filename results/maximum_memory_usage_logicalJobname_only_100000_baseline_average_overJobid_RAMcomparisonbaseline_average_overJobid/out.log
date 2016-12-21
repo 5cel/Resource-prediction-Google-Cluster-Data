@@ -1,0 +1,68 @@
+	Retrieving X and t... 	Done (0.5 s).
+	Preprocessing...
+		0/100000 tasks with value higer than 1.000000 deleted
+		0 columns deleted from X, containing task_usage info
+	Done (0.0 s).
+	Training baseline_average_overJobid... On 10 folds
+Using baseline_average_overJobid
+			Fold 0 	MAE: 0.000283 		RMSE: 0.001256
+					Worst prediction: 0.087, should be 0.010.
+					Mean prediction: 0.068, mean real: 0.068
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 3
+Using baseline_average_overJobid
+			Fold 1 	MAE: 0.000299 		RMSE: 0.001522
+					Worst prediction: 0.087, should be 0.006.
+					Mean prediction: 0.068, mean real: 0.069
+					Std prediction: 0.033, std real: 0.033
+					# real is zero: 0
+Using baseline_average_overJobid
+			Fold 2 	MAE: 0.000295 		RMSE: 0.001356
+					Worst prediction: 0.080, should be 0.004.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.033
+					# real is zero: 3
+Using baseline_average_overJobid
+			Fold 3 	MAE: 0.000287 		RMSE: 0.001578
+					Worst prediction: 0.119, should be 0.008.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+Using baseline_average_overJobid
+			Fold 4 	MAE: 0.000322 		RMSE: 0.002212
+					Worst prediction: 0.119, should be 0.005.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.033, std real: 0.033
+					# real is zero: 1
+Using baseline_average_overJobid
+			Fold 5 	MAE: 0.000308 		RMSE: 0.001676
+					Worst prediction: 0.080, should be 0.000.
+					Mean prediction: 0.070, mean real: 0.070
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 2
+Using baseline_average_overJobid
+			Fold 6 	MAE: 0.000291 		RMSE: 0.001191
+					Worst prediction: 0.087, should be 0.006.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+Using baseline_average_overJobid
+			Fold 7 	MAE: 0.000288 		RMSE: 0.000993
+					Worst prediction: 0.078, should be 0.004.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 0
+Using baseline_average_overJobid
+			Fold 8 	MAE: 0.000294 		RMSE: 0.001496
+					Worst prediction: 0.119, should be 0.004.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+Using baseline_average_overJobid
+			Fold 9 	MAE: 0.000315 		RMSE: 0.001926
+					Worst prediction: 0.087, should be 0.006.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 0
+	Done (12.6 s).
+Total error on 10 fold cross-validation: MAE: 0.000298		 RMSE: 0.001521

@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=movingAverage10, smooth, mark=*] coordinates {
+	(100000, 0.029330)
+	(200000, 0.033538)
+	(400000, 0.033010)
+	(600000, 0.033971)
+	(800000, 0.036585)
+	(1000000, 0.036792)
+};
+\addlegendentry{movingAverage10}
+\addplot[name path=movingAverage10_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.027337)
+	(200000, 0.031957)
+	(400000, 0.032298)
+	(600000, 0.033296)
+	(800000, 0.035959)
+	(1000000, 0.036447)
+};
+\addplot[name path=movingAverage10_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.031324)
+	(200000, 0.035120)
+	(400000, 0.033722)
+	(600000, 0.034647)
+	(800000, 0.037212)
+	(1000000, 0.037136)
+};
+\addplot fill between[
+	of = movingAverage10_lower_conf_bound and movingAverage10_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

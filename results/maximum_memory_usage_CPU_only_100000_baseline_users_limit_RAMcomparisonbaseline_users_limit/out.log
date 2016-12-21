@@ -1,0 +1,8 @@
+	Retrieving X and t... 	Done (0.4 s).
+	Preprocessing...
+		0/100000 tasks with value higer than 1.000000 deleted
+		57675/100000 cpu values increased from 0 to 0.031250
+		0 columns deleted from X, containing task_usage info
+	Done (0.1 s).
+	Training baseline_users_limit... On 10 folds
+Using baseline_users_limit

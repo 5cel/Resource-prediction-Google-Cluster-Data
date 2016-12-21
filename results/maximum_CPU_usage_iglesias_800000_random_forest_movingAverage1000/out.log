@@ -1,0 +1,115 @@
+	Retrieving X and t... 
+		start_time (s) min-max: (600, 251145)
+		end_time (s) min-max: (891, 251400)
+		average durage (s): 298.5
+	Done (29.2 s).
+	Preprocessing...
+		0/800000 killed tasks deleted
+		405/800000 tasks with value higer than 1.000000 deleted
+		66000/799595 cpu values increased from 0 to 0.000625
+		66000/799595 ram values increased from 0 to 0.000933
+		4 columns deleted from X, containing task_usage info
+	Done (3.7 s).
+	Training random_forest... On 10 folds
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0300083723606       0.109979698288                              0.145376801943                        0.00259905056307                          0.00765666298698             0.0629098167303       0.0571375658166      0.0588768127759              0.525455218536
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 0 	MAE: 0.022531 		RMSE: 0.040833
+					Worst prediction: 0.729, should be 0.118.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.069
+					# real is zero: 1274
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0370015876336       0.082887901284                              0.16207447658                         0.00239619044426                          0.00732554050084             0.0516241928694       0.053452438829       0.0529529496905              0.550284722168
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 1 	MAE: 0.022534 		RMSE: 0.040337
+					Worst prediction: 0.729, should be 0.083.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.069
+					# real is zero: 1244
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0369862566626       0.0885262416811                             0.146482979386                        0.0023347396038                           0.00927428675659             0.0608014960141       0.0694732135719      0.0585555631382              0.527565223185
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 2 	MAE: 0.022611 		RMSE: 0.041352
+					Worst prediction: 0.596, should be 0.033.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.070
+					# real is zero: 1312
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0326992079688       0.107693786093                              0.139552937426                        0.00271064909943                          0.00843083118957             0.0669197426309       0.0563256745305      0.0577773005975              0.527889870464
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 3 	MAE: 0.022614 		RMSE: 0.040457
+					Worst prediction: 0.640, should be 0.104.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.070
+					# real is zero: 1394
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0320847740789       0.0963115468564                             0.143664929467                        0.00232731871056                          0.0098895202495              0.0612031655184       0.0541552234238      0.050811813065               0.549551708631
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 4 	MAE: 0.022517 		RMSE: 0.040825
+					Worst prediction: 0.702, should be 0.148.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.070
+					# real is zero: 1365
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0378517803053       0.103534420437                              0.151372957784                        0.00309928189887                          0.0103025751794              0.067910552026        0.062506428699       0.0631464897983              0.500275513873
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 5 	MAE: 0.022407 		RMSE: 0.040339
+					Worst prediction: 0.598, should be 0.031.
+					Mean prediction: 0.092, mean real: 0.093
+					Std prediction: 0.064, std real: 0.069
+					# real is zero: 1341
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0294595384733       0.096787420693                              0.139154705327                        0.00211293315004                          0.00800930115879             0.061146028878        0.0635349384103      0.0531278600568              0.546667273853
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 6 	MAE: 0.022547 		RMSE: 0.040625
+					Worst prediction: 0.597, should be 0.048.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.069
+					# real is zero: 1391
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0338153050463       0.11720899275                               0.140365452637                        0.0024037758863                           0.0104819103142              0.0598768355947       0.0487898051313      0.061778077729               0.525279844912
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 7 	MAE: 0.022320 		RMSE: 0.039388
+					Worst prediction: 0.662, should be 0.104.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.063, std real: 0.068
+					# real is zero: 1309
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.037732371102        0.102993814221                              0.146010839588                        0.00215979422405                          0.00764857668614             0.0598169126324       0.0639210364079      0.05246575981                0.527250895328
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 8 	MAE: 0.022613 		RMSE: 0.041030
+					Worst prediction: 0.711, should be 0.115.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.064, std real: 0.070
+					# real is zero: 1348
+Using random_forest
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+task_events_priority  task_events_resource_request_for_CPU_cores  task_events_resource_request_for_RAM  task_events_different-machine_constraint  job_events_scheduling_class  job_events_user_name  job_events_job_name  job_events_job_name_logical  moving_average_n=1000
+0.0340991463489       0.0941363485084                             0.134198276923                        0.00185457345371                          0.00747576744067             0.0570012986668       0.0561592902933      0.055665584622               0.559409713743
+--------------------  ------------------------------------------  ------------------------------------  ----------------------------------------  ---------------------------  --------------------  -------------------  ---------------------------  ---------------------
+			Fold 9 	MAE: 0.022482 		RMSE: 0.040772
+					Worst prediction: 0.743, should be 0.190.
+					Mean prediction: 0.092, mean real: 0.093
+					Std prediction: 0.064, std real: 0.070
+					# real is zero: 1353
+	Done (3202.3 s).
+Total error on 10 fold cross-validation: MAE: 0.022518		 RMSE: 0.040596

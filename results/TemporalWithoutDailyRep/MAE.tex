@@ -1,0 +1,89 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=iglesias_TemporalWithoutDailyRep, smooth, mark=*] coordinates {
+	(100000, 0.014219)
+	(200000, 0.014693)
+	(400000, 0.015863)
+	(600000, 0.017684)
+	(800000, 0.019856)
+	(1000000, 0.020323)
+};
+\addlegendentry{iglesias_TemporalWithoutDailyRep}
+\addplot[name path=iglesias_TemporalWithoutDailyRep_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013977)
+	(200000, 0.014494)
+	(400000, 0.015762)
+	(600000, 0.017594)
+	(800000, 0.019760)
+	(1000000, 0.020246)
+};
+\addplot[name path=iglesias_TemporalWithoutDailyRep_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014460)
+	(200000, 0.014892)
+	(400000, 0.015963)
+	(600000, 0.017775)
+	(800000, 0.019952)
+	(1000000, 0.020399)
+};
+\addplot[name path=logicalJobname_Machine_TemporalWithoutDailyRep, smooth, mark=square*] coordinates {
+	(100000, 0.013957)
+	(200000, 0.014074)
+	(400000, 0.015215)
+	(600000, 0.016961)
+	(800000, 0.018539)
+	(1000000, 0.019073)
+};
+\addlegendentry{logicalJobname_Machine_TemporalWithoutDailyRep}
+\addplot[name path=logicalJobname_Machine_TemporalWithoutDailyRep_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013735)
+	(200000, 0.013921)
+	(400000, 0.015121)
+	(600000, 0.016868)
+	(800000, 0.018403)
+	(1000000, 0.019014)
+};
+\addplot[name path=logicalJobname_Machine_TemporalWithoutDailyRep_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014180)
+	(200000, 0.014227)
+	(400000, 0.015310)
+	(600000, 0.017055)
+	(800000, 0.018674)
+	(1000000, 0.019132)
+};
+\addplot[name path=jobid_Machine_StartTime_TemporalWithoutDailyRep, smooth, mark=triangle*] coordinates {
+	(100000, 0.013960)
+	(200000, 0.014074)
+	(400000, 0.015216)
+	(600000, 0.016961)
+	(800000, 0.018539)
+	(1000000, 0.019074)
+};
+\addlegendentry{jobid_Machine_StartTime_TemporalWithoutDailyRep}
+\addplot[name path=jobid_Machine_StartTime_TemporalWithoutDailyRep_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013693)
+	(200000, 0.013919)
+	(400000, 0.015057)
+	(600000, 0.016845)
+	(800000, 0.018466)
+	(1000000, 0.018966)
+};
+\addplot[name path=jobid_Machine_StartTime_TemporalWithoutDailyRep_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014227)
+	(200000, 0.014229)
+	(400000, 0.015375)
+	(600000, 0.017077)
+	(800000, 0.018612)
+	(1000000, 0.019182)
+};

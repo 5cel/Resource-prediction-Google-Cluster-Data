@@ -1,0 +1,124 @@
+	Retrieving X and t... 
+		start_time (s) min-max: (600, 251145)
+		end_time (s) min-max: (891, 251400)
+		average durage (s): 298.5
+	Done (9.4 s).
+	Preprocessing...
+		0/800000 killed tasks deleted
+		405/800000 tasks with value higer than 1.000000 deleted
+		Daily representation used
+		1 columns deleted from X, containing task_usage info
+	Done (1.0 s).
+	Training random_forest... On 10 folds
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0963208856629         0.903679114337
+----------------------  ---------------------------
+			Fold 0 	MAE: 0.018581 		RMSE: 0.034745
+					Worst prediction: 0.341, should be 0.070.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.060, std real: 0.070
+					# real is zero: 1277
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0902160726599         0.90978392734
+----------------------  ---------------------------
+			Fold 1 	MAE: 0.018435 		RMSE: 0.034167
+					Worst prediction: 0.596, should be 0.122.
+					Mean prediction: 0.092, mean real: 0.092
+					Std prediction: 0.060, std real: 0.069
+					# real is zero: 1308
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.104556296269          0.895443703731
+----------------------  ---------------------------
+			Fold 2 	MAE: 0.018549 		RMSE: 0.033876
+					Worst prediction: 0.598, should be 0.171.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.060, std real: 0.069
+					# real is zero: 1326
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0942002027852         0.905799797215
+----------------------  ---------------------------
+			Fold 3 	MAE: 0.018506 		RMSE: 0.033291
+					Worst prediction: 0.599, should be 0.082.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.060, std real: 0.069
+					# real is zero: 1338
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0941057142907         0.905894285709
+----------------------  ---------------------------
+			Fold 4 	MAE: 0.018529 		RMSE: 0.033390
+					Worst prediction: 0.598, should be 0.087.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.069
+					# real is zero: 1389
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.101358789713          0.898641210287
+----------------------  ---------------------------
+			Fold 5 	MAE: 0.018602 		RMSE: 0.034676
+					Worst prediction: 0.599, should be 0.105.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.070
+					# real is zero: 1371
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0957446532815         0.904255346718
+----------------------  ---------------------------
+			Fold 6 	MAE: 0.018589 		RMSE: 0.034255
+					Worst prediction: 0.342, should be 0.047.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.069
+					# real is zero: 1368
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.0989180245376         0.901081975462
+----------------------  ---------------------------
+			Fold 7 	MAE: 0.018494 		RMSE: 0.032903
+					Worst prediction: 0.598, should be 0.105.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.069
+					# real is zero: 1269
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.097916468928          0.902083531072
+----------------------  ---------------------------
+			Fold 8 	MAE: 0.018619 		RMSE: 0.034835
+					Worst prediction: 0.599, should be 0.112.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.070
+					# real is zero: 1362
+number of new elements 0. El in test: 114. in train: 114 n: 800000
+Using random_forest
+----------------------  ---------------------------
+task_events_machine_ID  job_events_job_name_logical
+0.095658566059          0.904341433941
+----------------------  ---------------------------
+			Fold 9 	MAE: 0.018494 		RMSE: 0.033882
+					Worst prediction: 0.599, should be 0.129.
+					Mean prediction: 0.093, mean real: 0.093
+					Std prediction: 0.061, std real: 0.070
+					# real is zero: 1323
+	Done (713.0 s).
+Total error on 10 fold cross-validation: MAE: 0.018540		 RMSE: 0.034002

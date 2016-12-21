@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=default, smooth, mark=*] coordinates {
+	(100000, 0.027283)
+	(200000, 0.031140)
+	(400000, 0.030246)
+	(600000, 0.031752)
+	(800000, 0.035817)
+	(1000000, 0.036542)
+};
+\addlegendentry{default}
+\addplot[name path=default_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.025785)
+	(200000, 0.028949)
+	(400000, 0.029293)
+	(600000, 0.031265)
+	(800000, 0.035420)
+	(1000000, 0.036026)
+};
+\addplot[name path=default_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.028781)
+	(200000, 0.033331)
+	(400000, 0.031199)
+	(600000, 0.032239)
+	(800000, 0.036214)
+	(1000000, 0.037058)
+};
+\addplot fill between[
+	of = default_lower_conf_bound and default_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

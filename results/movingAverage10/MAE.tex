@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=movingAverage10, smooth, mark=*] coordinates {
+	(100000, 0.014098)
+	(200000, 0.015003)
+	(400000, 0.016957)
+	(600000, 0.018603)
+	(800000, 0.019912)
+	(1000000, 0.019938)
+};
+\addlegendentry{movingAverage10}
+\addplot[name path=movingAverage10_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013919)
+	(200000, 0.014786)
+	(400000, 0.016872)
+	(600000, 0.018524)
+	(800000, 0.019796)
+	(1000000, 0.019848)
+};
+\addplot[name path=movingAverage10_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014277)
+	(200000, 0.015221)
+	(400000, 0.017043)
+	(600000, 0.018681)
+	(800000, 0.020028)
+	(1000000, 0.020028)
+};
+\addplot fill between[
+	of = movingAverage10_lower_conf_bound and movingAverage10_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption MAE}
+\label{fig:MAE}
+\end{figure}

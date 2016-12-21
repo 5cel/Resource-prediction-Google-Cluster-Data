@@ -1,0 +1,118 @@
+	Retrieving X and t... 	Done (2.1 s).
+	Preprocessing...
+		202/400000 tasks with value higer than 1.000000 deleted
+		0 columns deleted from X, containing task_usage info
+	Done (0.2 s).
+	Training random_forest... On 10 folds
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 0 	MAE: 0.016073 		RMSE: 0.031304
+					Worst prediction: 0.099, should be 0.005.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.049
+					# real is zero: 13
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 1 	MAE: 0.015767 		RMSE: 0.029089
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.047
+					# real is zero: 19
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 2 	MAE: 0.015791 		RMSE: 0.029898
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.048
+					# real is zero: 27
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 3 	MAE: 0.016036 		RMSE: 0.031344
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.049
+					# real is zero: 13
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 4 	MAE: 0.015820 		RMSE: 0.030068
+					Worst prediction: 0.099, should be 0.004.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.048
+					# real is zero: 18
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 5 	MAE: 0.015943 		RMSE: 0.029809
+					Worst prediction: 0.117, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.048
+					# real is zero: 14
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 6 	MAE: 0.015871 		RMSE: 0.029957
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.048
+					# real is zero: 20
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 7 	MAE: 0.015818 		RMSE: 0.031870
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.049
+					# real is zero: 19
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 8 	MAE: 0.015802 		RMSE: 0.029816
+					Worst prediction: 0.117, should be 0.000.
+					Mean prediction: 0.081, mean real: 0.081
+					Std prediction: 0.038, std real: 0.048
+					# real is zero: 22
+number of new elements 0. El in test: 53. in train: 53 n: 400000
+Using random_forest
+---------------------------
+job_events_job_name_logical
+1.0
+---------------------------
+			Fold 9 	MAE: 0.015698 		RMSE: 0.029335
+					Worst prediction: 0.133, should be 0.030.
+					Mean prediction: 0.082, mean real: 0.082
+					Std prediction: 0.037, std real: 0.047
+					# real is zero: 11
+	Done (95.0 s).
+Total error on 10 fold cross-validation: MAE: 0.015862		 RMSE: 0.030249

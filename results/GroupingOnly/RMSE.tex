@@ -1,0 +1,77 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=Grouping_withTime_GroupingOnly, smooth, mark=*] coordinates {
+	(100000, 0.027291)
+	(200000, 0.031181)
+	(400000, 0.030253)
+	(600000, 0.031782)
+	(800000, 0.036603)
+	(1000000, 0.037431)
+};
+\addlegendentry{Grouping_withTime_GroupingOnly}
+\addplot[name path=Grouping_withTime_GroupingOnly_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.025942)
+	(200000, 0.029679)
+	(400000, 0.029546)
+	(600000, 0.030766)
+	(800000, 0.036021)
+	(1000000, 0.037005)
+};
+\addplot[name path=Grouping_withTime_GroupingOnly_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.028640)
+	(200000, 0.032684)
+	(400000, 0.030961)
+	(600000, 0.032799)
+	(800000, 0.037186)
+	(1000000, 0.037858)
+};
+\addplot[name path=Grouping_only_GroupingOnly, smooth, mark=square*] coordinates {
+	(100000, 0.027234)
+	(200000, 0.031198)
+	(400000, 0.030249)
+	(600000, 0.031788)
+	(800000, 0.036603)
+	(1000000, 0.037430)
+};
+\addlegendentry{Grouping_only_GroupingOnly}
+\addplot[name path=Grouping_only_GroupingOnly_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.025009)
+	(200000, 0.030095)
+	(400000, 0.029369)
+	(600000, 0.030964)
+	(800000, 0.036050)
+	(1000000, 0.036896)
+};
+\addplot[name path=Grouping_only_GroupingOnly_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.029458)
+	(200000, 0.032302)
+	(400000, 0.031129)
+	(600000, 0.032612)
+	(800000, 0.037157)
+	(1000000, 0.037964)
+};
+\addplot fill between[
+	of = Grouping_withTime_GroupingOnly_lower_conf_bound and Grouping_withTime_GroupingOnly_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\addplot fill between[
+	of = Grouping_only_GroupingOnly_lower_conf_bound and Grouping_only_GroupingOnly_higher_conf_bound,
+	every even segment/.style = {red!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

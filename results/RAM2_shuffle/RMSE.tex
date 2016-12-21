@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=RAM2_shufflerandom_forest, smooth, mark=*] coordinates {
+	(100000, 0.001471)
+	(200000, 0.001136)
+	(400000, 0.001092)
+	(600000, 0.001020)
+	(800000, 0.002047)
+	(1000000, 0.002011)
+};
+\addlegendentry{RAM2_shufflerandom_forest}
+\addplot[name path=RAM2_shufflerandom_forest_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.000955)
+	(200000, 0.000872)
+	(400000, 0.000934)
+	(600000, 0.000917)
+	(800000, 0.001992)
+	(1000000, 0.001969)
+};
+\addplot[name path=RAM2_shufflerandom_forest_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.001986)
+	(200000, 0.001399)
+	(400000, 0.001249)
+	(600000, 0.001123)
+	(800000, 0.002103)
+	(1000000, 0.002052)
+};
+\addplot fill between[
+	of = RAM2_shufflerandom_forest_lower_conf_bound and RAM2_shufflerandom_forest_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

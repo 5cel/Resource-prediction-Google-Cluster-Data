@@ -1,0 +1,7 @@
+*.pyc
+*.project
+*.pydevproject
+*.settings
+tables.p
+pickles/
+data/

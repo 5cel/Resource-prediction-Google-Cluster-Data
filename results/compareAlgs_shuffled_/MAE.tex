@@ -1,0 +1,89 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=compareAlgs_shuffled_random_forest, smooth, mark=*] coordinates {
+	(100000, 0.014219)
+	(200000, 0.014692)
+	(400000, 0.015863)
+	(600000, 0.017684)
+	(800000, 0.019857)
+	(1000000, 0.020322)
+};
+\addlegendentry{compareAlgs_shuffled_random_forest}
+\addplot[name path=compareAlgs_shuffled_random_forest_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013847)
+	(200000, 0.014522)
+	(400000, 0.015812)
+	(600000, 0.017617)
+	(800000, 0.019779)
+	(1000000, 0.020229)
+};
+\addplot[name path=compareAlgs_shuffled_random_forest_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014590)
+	(200000, 0.014862)
+	(400000, 0.015914)
+	(600000, 0.017751)
+	(800000, 0.019934)
+	(1000000, 0.020416)
+};
+\addplot[name path=compareAlgs_shuffled_adaboost, smooth, mark=square*] coordinates {
+	(100000, 0.027213)
+	(200000, 0.039782)
+	(400000, 0.040117)
+	(600000, 0.065471)
+	(800000, 0.189070)
+	(1000000, 0.182263)
+};
+\addlegendentry{compareAlgs_shuffled_adaboost}
+\addplot[name path=compareAlgs_shuffled_adaboost_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.026416)
+	(200000, 0.039042)
+	(400000, 0.022345)
+	(600000, 0.047312)
+	(800000, 0.156383)
+	(1000000, 0.119361)
+};
+\addplot[name path=compareAlgs_shuffled_adaboost_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.028009)
+	(200000, 0.040521)
+	(400000, 0.057888)
+	(600000, 0.083629)
+	(800000, 0.221757)
+	(1000000, 0.245165)
+};
+\addplot[name path=compareAlgs_shuffled_baseline_average_overJobid, smooth, mark=triangle*] coordinates {
+	(100000, 0.014218)
+	(200000, 0.014693)
+	(400000, 0.015862)
+	(600000, 0.017711)
+	(800000, 0.020330)
+	(1000000, 0.020881)
+};
+\addlegendentry{compareAlgs_shuffled_baseline_average_overJobid}
+\addplot[name path=compareAlgs_shuffled_baseline_average_overJobid_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014079)
+	(200000, 0.014508)
+	(400000, 0.015728)
+	(600000, 0.017584)
+	(800000, 0.020237)
+	(1000000, 0.020832)
+};
+\addplot[name path=compareAlgs_shuffled_baseline_average_overJobid_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014358)
+	(200000, 0.014878)
+	(400000, 0.015995)
+	(600000, 0.017837)
+	(800000, 0.020423)
+	(1000000, 0.020930)
+};

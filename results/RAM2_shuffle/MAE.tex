@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=RAM2_shufflerandom_forest, smooth, mark=*] coordinates {
+	(100000, 0.000299)
+	(200000, 0.000342)
+	(400000, 0.000412)
+	(600000, 0.000425)
+	(800000, 0.000652)
+	(1000000, 0.000644)
+};
+\addlegendentry{RAM2_shufflerandom_forest}
+\addplot[name path=RAM2_shufflerandom_forest_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.000282)
+	(200000, 0.000335)
+	(400000, 0.000407)
+	(600000, 0.000423)
+	(800000, 0.000646)
+	(1000000, 0.000639)
+};
+\addplot[name path=RAM2_shufflerandom_forest_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.000317)
+	(200000, 0.000350)
+	(400000, 0.000418)
+	(600000, 0.000428)
+	(800000, 0.000657)
+	(1000000, 0.000648)
+};
+\addplot fill between[
+	of = RAM2_shufflerandom_forest_lower_conf_bound and RAM2_shufflerandom_forest_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption MAE}
+\label{fig:MAE}
+\end{figure}

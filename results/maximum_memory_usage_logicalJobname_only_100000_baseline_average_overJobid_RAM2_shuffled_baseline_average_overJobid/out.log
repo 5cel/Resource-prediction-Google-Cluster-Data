@@ -1,0 +1,78 @@
+	Retrieving X and t... 	Done (0.5 s).
+	Preprocessing...
+		0/100000 tasks with value higer than 1.000000 deleted
+		0 columns deleted from X, containing task_usage info
+	Done (0.0 s).
+	Training baseline_average_overJobid... On 10 folds
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 0 	MAE: 0.000300 		RMSE: 0.001736
+					Worst prediction: 0.087, should be 0.008.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 1 	MAE: 0.000308 		RMSE: 0.001893
+					Worst prediction: 0.119, should be 0.004.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 0
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 2 	MAE: 0.000276 		RMSE: 0.000923
+					Worst prediction: 0.081, should be 0.006.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 3
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 3 	MAE: 0.000326 		RMSE: 0.002231
+					Worst prediction: 0.119, should be 0.005.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 0
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 4 	MAE: 0.000305 		RMSE: 0.001646
+					Worst prediction: 0.087, should be 0.006.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 5 	MAE: 0.000285 		RMSE: 0.001190
+					Worst prediction: 0.078, should be 0.004.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 2
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 6 	MAE: 0.000290 		RMSE: 0.001152
+					Worst prediction: 0.087, should be 0.009.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 7 	MAE: 0.000286 		RMSE: 0.001192
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 1
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 8 	MAE: 0.000311 		RMSE: 0.001785
+					Worst prediction: 0.081, should be 0.000.
+					Mean prediction: 0.069, mean real: 0.069
+					Std prediction: 0.033, std real: 0.033
+					# real is zero: 0
+number of new elements 0. El in test: 36. in train: 36 n: 100000
+Using baseline_average_overJobid
+			Fold 9 	MAE: 0.000294 		RMSE: 0.001339
+					Worst prediction: 0.087, should be 0.010.
+					Mean prediction: 0.070, mean real: 0.070
+					Std prediction: 0.032, std real: 0.032
+					# real is zero: 3
+	Done (12.8 s).
+Total error on 10 fold cross-validation: MAE: 0.000298		 RMSE: 0.001509

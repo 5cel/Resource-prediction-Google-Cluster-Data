@@ -1,0 +1,77 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=Grouping_withTime_GroupingOnly, smooth, mark=*] coordinates {
+	(100000, 0.014219)
+	(200000, 0.014693)
+	(400000, 0.015861)
+	(600000, 0.017711)
+	(800000, 0.020330)
+	(1000000, 0.020881)
+};
+\addlegendentry{Grouping_withTime_GroupingOnly}
+\addplot[name path=Grouping_withTime_GroupingOnly_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013947)
+	(200000, 0.014533)
+	(400000, 0.015736)
+	(600000, 0.017562)
+	(800000, 0.020206)
+	(1000000, 0.020808)
+};
+\addplot[name path=Grouping_withTime_GroupingOnly_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014491)
+	(200000, 0.014854)
+	(400000, 0.015987)
+	(600000, 0.017859)
+	(800000, 0.020454)
+	(1000000, 0.020953)
+};
+\addplot[name path=Grouping_only_GroupingOnly, smooth, mark=square*] coordinates {
+	(100000, 0.014218)
+	(200000, 0.014693)
+	(400000, 0.015862)
+	(600000, 0.017711)
+	(800000, 0.020329)
+	(1000000, 0.020881)
+};
+\addlegendentry{Grouping_only_GroupingOnly}
+\addplot[name path=Grouping_only_GroupingOnly_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013992)
+	(200000, 0.014541)
+	(400000, 0.015748)
+	(600000, 0.017599)
+	(800000, 0.020243)
+	(1000000, 0.020790)
+};
+\addplot[name path=Grouping_only_GroupingOnly_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014444)
+	(200000, 0.014845)
+	(400000, 0.015976)
+	(600000, 0.017823)
+	(800000, 0.020416)
+	(1000000, 0.020972)
+};
+\addplot fill between[
+	of = Grouping_withTime_GroupingOnly_lower_conf_bound and Grouping_withTime_GroupingOnly_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\addplot fill between[
+	of = Grouping_only_GroupingOnly_lower_conf_bound and Grouping_only_GroupingOnly_higher_conf_bound,
+	every even segment/.style = {red!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption MAE}
+\label{fig:MAE}
+\end{figure}

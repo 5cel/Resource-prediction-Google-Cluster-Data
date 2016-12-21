@@ -1,0 +1,125 @@
+Unknown option: -a
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+Loading the data took 22.193856 sec
+Loading the data took 13.188002 sec
+Traceback (most recent call last):
+  File "createGraphs.py", line 173, in <module>
+    X=X, t=t, colnames=colnames)
+  File "/opt/csc2233/python_Prepare_data/main/pipeline.py", line 57, in runPipeline
+    colnames, options_preprocess)
+  File "/opt/csc2233/python_Prepare_data/main/preprocessing/prepro.py", line 55, in process_train_test
+    colnames, groupBy)
+  File "/opt/csc2233/python_Prepare_data/main/preprocessing/sequentialData.py", line 28, in movingAverageGrouped
+    col_merge_number = [i for i, c in enumerate(colnames) if groupBy in c][0]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "createGraphs.py", line 173, in <module>
+    X=X, t=t, colnames=colnames)
+  File "/opt/csc2233/python_Prepare_data/main/pipeline.py", line 57, in runPipeline
+    colnames, options_preprocess)
+  File "/opt/csc2233/python_Prepare_data/main/preprocessing/prepro.py", line 55, in process_train_test
+    colnames, groupBy)
+  File "/opt/csc2233/python_Prepare_data/main/preprocessing/sequentialData.py", line 28, in movingAverageGrouped
+    col_merge_number = [i for i, c in enumerate(colnames) if groupBy in c][0]
+IndexError: list index out of range
+Loading the data took 1.652176 sec
+Loading the data took 1.681497 sec
+Loading the data took 1.013731 sec
+Loading the data took 0.871717 sec
+Loading the data took 1.095377 sec
+Loading the data took 1.159845 sec
+Loading the data took 1.028114 sec
+Loading the data took 1.102574 sec
+Loading the data took 1.661332 sec
+Loading the data took 1.678554 sec
+Loading the data took 0.774471 sec
+Loading the data took 0.800195 sec
+Loading the data took 1.085931 sec
+Loading the data took 1.032085 sec
+Loading the data took 1.022074 sec
+Loading the data took 1.044618 sec
+Loading the data took 28.671663 sec
+Loading the data took 35.586019 sec
+Loading the data took 1.677270 sec
+Loading the data took 1.615556 sec
+Loading the data took 2.145314 sec
+Loading the data took 2.140648 sec
+Loading the data took 1.702066 sec
+Loading the data took 1.659517 sec
+Loading the data took 0.775719 sec
+Loading the data took 2.152981 sec
+Loading the data took 2.017991 sec
+Loading the data took 0.772707 sec
+Loading the data took 1.115362 sec
+Loading the data took 1.075443 sec
+Loading the data took 1.026946 sec
+Loading the data took 1.003925 sec
+Loading the data took 58.931372 sec
+Loading the data took 59.794995 sec
+Loading the data took 3.290555 sec
+Loading the data took 206.068591 sec
+Loading the data took 219.804732 sec
+Loading the data took 3.245831 sec
+Loading the data took 4.120126 sec
+Loading the data took 4.376024 sec
+Loading the data took 8.044413 sec
+Loading the data took 8.014215 sec
+Loading the data took 3.987404 sec
+Loading the data took 4.044833 sec
+Loading the data took 10.467290 sec
+Loading the data took 10.450593 sec
+Loading the data took 4.573087 sec
+Loading the data took 4.514743 sec
+Loading the data took 10.919702 sec
+Loading the data took 10.759411 sec
+Loading the data took 6.361312 sec
+Loading the data took 6.539226 sec
+Loading the data took 5.883165 sec
+Loading the data took 6.001304 sec
+Loading the data took 9.862605 sec
+Loading the data took 9.988753 sec
+Loading the data took 14.344969 sec
+Loading the data took 14.328381 sec
+Loading the data took 6.745636 sec
+Loading the data took 6.729030 sec
+Loading the data took 9.067290 sec
+Loading the data took 9.069246 sec
+Loading the data took 8.011916 sec
+Loading the data took 7.876053 sec
+Loading the data took 2082.107364 sec
+Loading the data took 2104.133492 sec
+Loading the data took 17.637217 sec
+Loading the data took 17.697709 sec
+Loading the data took 8.455287 sec
+Loading the data took 8.261914 sec
+Loading the data took 10.896380 sec
+Loading the data took 10.981766 sec
+Loading the data took 10.516156 sec
+Loading the data took 10.142503 sec
+Traceback (most recent call last):
+  File "createGraphs.py", line 202, in <module>
+    "%sMAE" % folder_totals)
+  File "/opt/csc2233/python_Prepare_data/main/visualization/results.py", line 42, in error_graph
+    mark=marks[i])
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "createGraphs.py", line 202, in <module>
+    "%sMAE" % folder_totals)
+  File "/opt/csc2233/python_Prepare_data/main/visualization/results.py", line 42, in error_graph
+    mark=marks[i])
+IndexError: list index out of range
+Loading the data took 86.186166 sec
+Loading the data took 83.281070 sec
+Loading the data took 0.884629 sec
+Loading the data took 0.654106 sec
+Loading the data took 1.843456 sec
+Loading the data took 1.205055 sec
+Loading the data took 3.662369 sec
+Loading the data took 2.526699 sec
+Loading the data took 5.529135 sec
+Loading the data took 3.669407 sec
+Loading the data took 7.092854 sec
+Loading the data took 4.872314 sec
+Loading the data took 8.840780 sec
+Loading the data took 6.168576 sec

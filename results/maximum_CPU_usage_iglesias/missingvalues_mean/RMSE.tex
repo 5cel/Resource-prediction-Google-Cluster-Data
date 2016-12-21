@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=missingvalues_mean, smooth, mark=*] coordinates {
+	(100000, 0.027270)
+	(200000, 0.031195)
+	(400000, 0.030255)
+	(600000, 0.031744)
+	(800000, 0.035817)
+	(1000000, 0.036542)
+};
+\addlegendentry{missingvalues_mean}
+\addplot[name path=missingvalues_mean_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.025533)
+	(200000, 0.030008)
+	(400000, 0.029611)
+	(600000, 0.030881)
+	(800000, 0.035503)
+	(1000000, 0.036102)
+};
+\addplot[name path=missingvalues_mean_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.029007)
+	(200000, 0.032382)
+	(400000, 0.030899)
+	(600000, 0.032608)
+	(800000, 0.036131)
+	(1000000, 0.036982)
+};
+\addplot fill between[
+	of = missingvalues_mean_lower_conf_bound and missingvalues_mean_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

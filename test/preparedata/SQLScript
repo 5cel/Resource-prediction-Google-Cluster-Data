@@ -1,0 +1,36 @@
+select STRAIGHT_JOIN
+je.job_ID job_ID,
+tu.task_index task_index,
+tu.start_time start_time,
+tu.end_time end_time,
+tu.maximum_memory_usage maximum_memory_usage,
+tu.maximum_CPU_rate maximum_CPU_rate,
+je.time JE_Time,
+je.missing_info JE_missing_info,
+je.event_type JE_event_type,
+je.user JE_User,
+je.scheduling_class JE_scheduling_class,
+je.job_name job_name,
+je.logical_job_name logical_job_name,
+te.time TE_Time,
+te.missing_info TE_missing_info,
+te.machine_ID machine_ID,
+te.event_type TE_event_type,
+te.user TE_User,
+te.scheduling_class TE_scheduling_class,
+te.priority priority,
+te.CPU_request CPU_request,
+te.memory_request memory_request,
+te.disk_space_request disk_space_request,
+te.different_machines_restriction different_machines_restriction 
+from 
+(
+	(
+	job_events_staging_grouped je
+	inner join task_events_staging_1_grouped te 
+	on((te.job_ID = je.job_ID)) 
+	inner join task_usage_staging_1 tu
+	on(((tu.job_ID = te.job_ID) and (tu.task_index = te.task_index)))
+	)
+)
+order by je.time

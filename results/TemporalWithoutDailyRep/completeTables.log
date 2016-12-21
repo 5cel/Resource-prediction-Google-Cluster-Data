@@ -1,0 +1,28 @@
+MAE avgs                                                     100000     200000     400000     600000     800000    1000000
+--------------------------------------------------------  ---------  ---------  ---------  ---------  ---------  ---------
+logicalJobname_Machine_TemporalWithoutDailyRep            0.0139574  0.0140743  0.0152152  0.0169614  0.0185386  0.0190732
+logicalJobname_Machine_StartTime_TemporalWithoutDailyRep  0.0139593  0.0140729  0.015215   0.0169603  0.0185397  0.019074
+jobid_Machine_StartTime_TemporalWithoutDailyRep           0.01396    0.0140736  0.0152156  0.0169609  0.0185389  0.0190744
+iglesias_TemporalWithoutDailyRep                          0.014219   0.0146931  0.0158626  0.0176845  0.0198564  0.0203225
+
+MAE stds                                                       100000       200000       400000       600000       800000      1000000
+--------------------------------------------------------  -----------  -----------  -----------  -----------  -----------  -----------
+logicalJobname_Machine_TemporalWithoutDailyRep            0.000222516  0.000152916  9.45736e-05  9.31696e-05  0.00013563   5.88937e-05
+logicalJobname_Machine_StartTime_TemporalWithoutDailyRep  0.000249567  0.00019309   0.000133778  0.000120119  7.53867e-05  8.45327e-05
+jobid_Machine_StartTime_TemporalWithoutDailyRep           0.00026745   0.000154963  0.000158969  0.000115918  7.30339e-05  0.00010807
+iglesias_TemporalWithoutDailyRep                          0.000241545  0.000198952  0.000100301  9.00944e-05  9.58988e-05  7.65259e-05
+
+RMSE avgs                                                    100000     200000     400000     600000     800000    1000000
+--------------------------------------------------------  ---------  ---------  ---------  ---------  ---------  ---------
+logicalJobname_Machine_TemporalWithoutDailyRep            0.0269683  0.0307296  0.0296782  0.0310715  0.0339947  0.0347646
+logicalJobname_Machine_StartTime_TemporalWithoutDailyRep  0.0270221  0.030691   0.0296675  0.0310534  0.0340065  0.0347631
+jobid_Machine_StartTime_TemporalWithoutDailyRep           0.0269609  0.0307344  0.0296677  0.0310673  0.0340006  0.0347655
+iglesias_TemporalWithoutDailyRep                          0.027252   0.0311608  0.0302536  0.0317429  0.0358157  0.036544
+
+RMSE stds                                                     100000      200000       400000       600000       800000      1000000
+--------------------------------------------------------  ----------  ----------  -----------  -----------  -----------  -----------
+logicalJobname_Machine_TemporalWithoutDailyRep            0.00227063  0.00136987  0.000783108  0.000572512  0.000921067  0.000444103
+logicalJobname_Machine_StartTime_TemporalWithoutDailyRep  0.00155227  0.00204633  0.00106744   0.00118856   0.000402609  0.000535185
+jobid_Machine_StartTime_TemporalWithoutDailyRep           0.00241866  0.00125926  0.00109507   0.000749794  0.000653113  0.000524415
+iglesias_TemporalWithoutDailyRep                          0.00200742  0.00188507  0.000670041  0.000959151  0.000493423  0.000283701
+

@@ -1,0 +1,69 @@
+	Retrieving X and t... 	Done (0.4 s).
+	Preprocessing...
+		41/100000 tasks with value higer than 1.000000 deleted
+		57646/99959 cpu values increased from 0 to 0.031250
+		0 columns deleted from X, containing task_usage info
+	Done (0.1 s).
+	Training baseline_users_limit... On 10 folds
+Using baseline_users_limit
+			Fold 0 	MAE: 0.049735 		RMSE: 0.066132
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.054
+					Std prediction: 0.041, std real: 0.047
+					# real is zero: 5
+Using baseline_users_limit
+			Fold 1 	MAE: 0.050077 		RMSE: 0.068331
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.040, std real: 0.050
+					# real is zero: 0
+Using baseline_users_limit
+			Fold 2 	MAE: 0.049967 		RMSE: 0.069260
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.052, mean real: 0.056
+					Std prediction: 0.040, std real: 0.052
+					# real is zero: 1
+Using baseline_users_limit
+			Fold 3 	MAE: 0.049676 		RMSE: 0.066425
+					Worst prediction: 0.188, should be 0.000.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.041, std real: 0.048
+					# real is zero: 3
+Using baseline_users_limit
+			Fold 4 	MAE: 0.050273 		RMSE: 0.068413
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.041, std real: 0.050
+					# real is zero: 1
+Using baseline_users_limit
+			Fold 5 	MAE: 0.049854 		RMSE: 0.066617
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.054
+					Std prediction: 0.041, std real: 0.048
+					# real is zero: 2
+Using baseline_users_limit
+			Fold 6 	MAE: 0.050804 		RMSE: 0.068060
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.041, std real: 0.049
+					# real is zero: 0
+Using baseline_users_limit
+			Fold 7 	MAE: 0.049928 		RMSE: 0.067416
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.040, std real: 0.050
+					# real is zero: 1
+Using baseline_users_limit
+			Fold 8 	MAE: 0.049455 		RMSE: 0.066564
+					Worst prediction: 0.188, should be 0.001.
+					Mean prediction: 0.053, mean real: 0.055
+					Std prediction: 0.040, std real: 0.049
+					# real is zero: 1
+Using baseline_users_limit
+			Fold 9 	MAE: 0.050895 		RMSE: 0.067870
+					Worst prediction: 0.188, should be 0.000.
+					Mean prediction: 0.054, mean real: 0.056
+					Std prediction: 0.041, std real: 0.049
+					# real is zero: 5
+	Done (13.7 s).
+Total error on 10 fold cross-validation: MAE: 0.050066		 RMSE: 0.067509

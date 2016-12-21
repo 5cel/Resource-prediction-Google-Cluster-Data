@@ -1,0 +1,106 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=RAMcomparisonrandom_forest, smooth, mark=*] coordinates {
+	(100000, 0.001502)
+	(200000, 0.001147)
+	(400000, 0.001097)
+	(600000, 0.001020)
+	(800000, 0.002047)
+	(1000000, 0.002010)
+};
+\addlegendentry{RAMcomparisonrandom_forest}
+\addplot[name path=RAMcomparisonrandom_forest_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.001087)
+	(200000, 0.000938)
+	(400000, 0.000988)
+	(600000, 0.000919)
+	(800000, 0.001998)
+	(1000000, 0.001949)
+};
+\addplot[name path=RAMcomparisonrandom_forest_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.001918)
+	(200000, 0.001356)
+	(400000, 0.001207)
+	(600000, 0.001121)
+	(800000, 0.002096)
+	(1000000, 0.002071)
+};
+\addplot[name path=RAMcomparisonbaseline_average_overJobid, smooth, mark=square*] coordinates {
+	(100000, 0.001521)
+	(200000, 0.001128)
+	(400000, 0.001093)
+	(600000, 0.001717)
+	(800000, 0.002843)
+	(1000000, 0.002695)
+};
+\addlegendentry{RAMcomparisonbaseline_average_overJobid}
+\addplot[name path=RAMcomparisonbaseline_average_overJobid_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.001181)
+	(200000, 0.000834)
+	(400000, 0.000935)
+	(600000, 0.001659)
+	(800000, 0.002801)
+	(1000000, 0.002657)
+};
+\addplot[name path=RAMcomparisonbaseline_average_overJobid_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.001860)
+	(200000, 0.001422)
+	(400000, 0.001251)
+	(600000, 0.001774)
+	(800000, 0.002884)
+	(1000000, 0.002734)
+};
+\addplot[name path=RAMcomparisonbaseline_users_limit, smooth, mark=triangle*] coordinates {
+	(100000, 0.067526)
+	(200000, 0.078877)
+	(400000, 0.062166)
+	(600000, 0.055443)
+	(800000, 0.049814)
+	(1000000, 0.045214)
+};
+\addlegendentry{RAMcomparisonbaseline_users_limit}
+\addplot[name path=RAMcomparisonbaseline_users_limit_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.067304)
+	(200000, 0.078692)
+	(400000, 0.062007)
+	(600000, 0.055349)
+	(800000, 0.049704)
+	(1000000, 0.045086)
+};
+\addplot[name path=RAMcomparisonbaseline_users_limit_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.067749)
+	(200000, 0.079062)
+	(400000, 0.062325)
+	(600000, 0.055538)
+	(800000, 0.049924)
+	(1000000, 0.045342)
+};
+\addplot fill between[
+	of = RAMcomparisonrandom_forest_lower_conf_bound and RAMcomparisonrandom_forest_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\addplot fill between[
+	of = RAMcomparisonbaseline_average_overJobid_lower_conf_bound and RAMcomparisonbaseline_average_overJobid_higher_conf_bound,
+	every even segment/.style = {red!50}, forget plot,
+];
+\addplot fill between[
+	of = RAMcomparisonbaseline_users_limit_lower_conf_bound and RAMcomparisonbaseline_users_limit_higher_conf_bound,
+	every even segment/.style = {green!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

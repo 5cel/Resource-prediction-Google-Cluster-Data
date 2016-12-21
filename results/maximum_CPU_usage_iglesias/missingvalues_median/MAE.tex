@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=missingvalues_median, smooth, mark=*] coordinates {
+	(100000, 0.014219)
+	(200000, 0.014694)
+	(400000, 0.015863)
+	(600000, 0.017684)
+	(800000, 0.019857)
+	(1000000, 0.020323)
+};
+\addlegendentry{missingvalues_median}
+\addplot[name path=missingvalues_median_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014078)
+	(200000, 0.014513)
+	(400000, 0.015706)
+	(600000, 0.017614)
+	(800000, 0.019808)
+	(1000000, 0.020231)
+};
+\addplot[name path=missingvalues_median_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014360)
+	(200000, 0.014875)
+	(400000, 0.016020)
+	(600000, 0.017754)
+	(800000, 0.019906)
+	(1000000, 0.020415)
+};
+\addplot fill between[
+	of = missingvalues_median_lower_conf_bound and missingvalues_median_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption MAE}
+\label{fig:MAE}
+\end{figure}

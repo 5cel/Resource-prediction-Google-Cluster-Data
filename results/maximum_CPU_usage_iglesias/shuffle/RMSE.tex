@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={RMSE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=shuffle, smooth, mark=*] coordinates {
+	(100000, 0.027262)
+	(200000, 0.031181)
+	(400000, 0.030242)
+	(600000, 0.031745)
+	(800000, 0.035813)
+	(1000000, 0.036542)
+};
+\addlegendentry{shuffle}
+\addplot[name path=shuffle_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.025397)
+	(200000, 0.029669)
+	(400000, 0.029168)
+	(600000, 0.030949)
+	(800000, 0.035129)
+	(1000000, 0.036062)
+};
+\addplot[name path=shuffle_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.029126)
+	(200000, 0.032694)
+	(400000, 0.031316)
+	(600000, 0.032542)
+	(800000, 0.036497)
+	(1000000, 0.037022)
+};
+\addplot fill between[
+	of = shuffle_lower_conf_bound and shuffle_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption RMSE}
+\label{fig:RMSE}
+\end{figure}

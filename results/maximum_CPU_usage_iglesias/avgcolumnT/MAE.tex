@@ -1,0 +1,48 @@
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+	grid=major,
+	ymin=0,
+	xmin=0,
+	xmax=1000000,
+	xlabel={total n},
+	ylabel={MAE},
+	legend style={at={(0.5,-0.17)},anchor=north,legend cell align=left}
+]
+\addlegendimage{mark=*, blue}
+\addlegendimage{mark=square*, red}
+\addlegendimage{mark=triangle*, green}
+\addplot[name path=avgcolumnT, smooth, mark=*] coordinates {
+	(100000, 0.014219)
+	(200000, 0.014692)
+	(400000, 0.015863)
+	(600000, 0.017684)
+	(800000, 0.019857)
+	(1000000, 0.020323)
+};
+\addlegendentry{avgcolumnT}
+\addplot[name path=avgcolumnT_lower_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.013984)
+	(200000, 0.014481)
+	(400000, 0.015828)
+	(600000, 0.017568)
+	(800000, 0.019753)
+	(1000000, 0.020239)
+};
+\addplot[name path=avgcolumnT_higher_conf_bound, smooth, forget plot] coordinates {
+	(100000, 0.014455)
+	(200000, 0.014904)
+	(400000, 0.015897)
+	(600000, 0.017801)
+	(800000, 0.019961)
+	(1000000, 0.020408)
+};
+\addplot fill between[
+	of = avgcolumnT_lower_conf_bound and avgcolumnT_higher_conf_bound,
+	every even segment/.style = {blue!50}, forget plot,
+];
+\end{axis}
+\end{tikzpicture}
+\caption{Caption MAE}
+\label{fig:MAE}
+\end{figure}

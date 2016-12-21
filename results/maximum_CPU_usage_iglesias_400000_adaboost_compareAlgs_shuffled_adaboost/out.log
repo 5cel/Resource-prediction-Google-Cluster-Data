@@ -1,0 +1,75 @@
+	Retrieving X and t... 
+		start_time (s) min-max: (600, 251100)
+		end_time (s) min-max: (900, 251400)
+		average durage (s): 299.7
+	Done (14.5 s).
+	Preprocessing...
+		0/400000 killed tasks deleted
+		202/400000 tasks with value higer than 1.000000 deleted
+		65164/399798 cpu values increased from 0 to 0.015620
+		65164/399798 ram values increased from 0 to 0.003109
+		4 columns deleted from X, containing task_usage info
+	Done (1.0 s).
+	Training adaboost... On 10 folds
+Using adaboost
+			Fold 0 	MAE: 0.030701 		RMSE: 0.041441
+					Worst prediction: 0.157, should be 0.000.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.047, std real: 0.048
+					# real is zero: 21
+Using adaboost
+			Fold 1 	MAE: 0.031414 		RMSE: 0.042025
+					Worst prediction: 0.160, should be 0.053.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.049, std real: 0.047
+					# real is zero: 16
+Using adaboost
+			Fold 2 	MAE: 0.030987 		RMSE: 0.042245
+					Worst prediction: 0.105, should be 0.000.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.047, std real: 0.048
+					# real is zero: 17
+Using adaboost
+			Fold 3 	MAE: 0.030866 		RMSE: 0.042533
+					Worst prediction: 0.157, should be 0.044.
+					Mean prediction: 0.102, mean real: 0.082
+					Std prediction: 0.047, std real: 0.049
+					# real is zero: 20
+Using adaboost
+			Fold 4 	MAE: 0.076210 		RMSE: 0.095273
+					Worst prediction: 0.255, should be 0.009.
+					Mean prediction: 0.153, mean real: 0.081
+					Std prediction: 0.087, std real: 0.047
+					# real is zero: 28
+Using adaboost
+			Fold 5 	MAE: 0.031304 		RMSE: 0.042902
+					Worst prediction: 0.157, should be 0.000.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.047, std real: 0.048
+					# real is zero: 15
+Using adaboost
+			Fold 6 	MAE: 0.031268 		RMSE: 0.041987
+					Worst prediction: 0.158, should be 0.039.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.047, std real: 0.048
+					# real is zero: 14
+Using adaboost
+			Fold 7 	MAE: 0.031497 		RMSE: 0.042827
+					Worst prediction: 0.159, should be 0.056.
+					Mean prediction: 0.103, mean real: 0.082
+					Std prediction: 0.047, std real: 0.048
+					# real is zero: 20
+Using adaboost
+			Fold 8 	MAE: 0.075093 		RMSE: 0.092503
+					Worst prediction: 0.204, should be 0.004.
+					Mean prediction: 0.152, mean real: 0.082
+					Std prediction: 0.083, std real: 0.049
+					# real is zero: 11
+Using adaboost
+			Fold 9 	MAE: 0.031827 		RMSE: 0.043320
+					Worst prediction: 0.159, should be 0.054.
+					Mean prediction: 0.104, mean real: 0.082
+					Std prediction: 0.047, std real: 0.049
+					# real is zero: 14
+	Done (237.6 s).
+Total error on 10 fold cross-validation: MAE: 0.040117		 RMSE: 0.052706

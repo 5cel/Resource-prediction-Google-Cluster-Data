@@ -1,0 +1,35 @@
+	Retrieving X and t... 
+		start_time (s) min-max: (600, 251100)
+		end_time (s) min-max: (900, 251400)
+		average durage (s): 299.8
+	Done (3.1 s).
+	Preprocessing...
+		0/100000 killed tasks deleted
+		41/100000 tasks with value higer than 1.000000 deleted
+		57646/99959 cpu values increased from 0 to 0.031250
+		57646/99959 ram values increased from 0 to 0.003109
+		4 columns deleted from X, containing task_usage info
+	Done (0.2 s).
+	Training random_forest... On 10 folds
+Using random_forest
+			Fold 0 	MAE: 0.014380 		RMSE: 0.029640
+Using random_forest
+			Fold 1 	MAE: 0.014547 		RMSE: 0.030141
+Using random_forest
+			Fold 2 	MAE: 0.014026 		RMSE: 0.025287
+Using random_forest
+			Fold 3 	MAE: 0.014119 		RMSE: 0.026520
+Using random_forest
+			Fold 4 	MAE: 0.014445 		RMSE: 0.028419
+Using random_forest
+			Fold 5 	MAE: 0.014220 		RMSE: 0.028119
+Using random_forest
+			Fold 6 	MAE: 0.014106 		RMSE: 0.028245
+Using random_forest
+			Fold 7 	MAE: 0.014013 		RMSE: 0.023420
+Using random_forest
+			Fold 8 	MAE: 0.014232 		RMSE: 0.026164
+Using random_forest
+			Fold 9 	MAE: 0.014090 		RMSE: 0.026602
+	Done (38.6 s).
+Total error on 10 fold cross-validation: MAE: 0.014218		 RMSE: 0.027256
